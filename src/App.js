@@ -53,7 +53,7 @@ class App extends Component {
           <ToolBar title="Previewer" sizeControlIcon={classes[2]} onClick={this.handlePreviewerMaximized} />
           <Previewer markdown={markdown} />
         </div>
-        
+        <label style={{display:'flex',justifyContent:"center"}}>© Qian Tang 2020</label>
       </div>
     );
   }
