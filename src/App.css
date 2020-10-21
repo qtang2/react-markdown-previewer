@@ -25,8 +25,7 @@ body {
 .tool-bar i:hover {
   background-color: red;
 }
-
-.maximized {
+.editor-maximized {
   margin-left: 2%;
   margin-right: 2%;
   height: 95vh;
@@ -36,17 +35,28 @@ body {
   border: var(--default-border);
 }
 
+.previewer-maximized {
+  margin-left: 2%;
+  margin-right: 2%;
+  height: fit-content;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: var(--container-background);
+  border: var(--default-border);
+}
+
 #editor {
   border: none;
+  height: 100%;
   background-color: var(--container-background);
 }
 
-.maximized #editor {
-  height: 100%;
+.editor-maximized #editor {
+  height: 83%;
   width: 100%;
 }
 
-.maximized #preview {
+.previewer-maximized #preview {
   height: 100%;
   width: 100%;
 }
@@ -55,6 +65,14 @@ body {
   display: none;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0.7;
+}
 .editor-container {
   margin-left: 15%;
   margin-right: 15%;
@@ -66,7 +84,7 @@ body {
 }
 
 .editor-container #editor {
-  height: 86%;
+  height: 83%;
   background-color: var(--container-background);
   width: 100%;
 }
@@ -75,7 +93,6 @@ body {
   margin-left: 6%;
   margin-right: 6%;
   margin-top: 15px;
-  margin-bottom: 5px;
   height: fit-content;
   border: var(--default-border);
   box-shadow: var(--shadow);

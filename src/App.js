@@ -37,13 +37,18 @@ class App extends Component {
 
   render(){
     const classes = this.state.editorMaximized?
-      ['maximized','hide','fa fa-compress']:
+      ['editor-maximized','hide','fa fa-compress']:
       this.state.previewerMaximized?
-      ['hide','maximized','fa fa-compress']:
+      ['hide','previewer-maximized','fa fa-compress']:
       ['editor-container','previewer-container','fa fa-arrows-alt']
     let markdown = this.state.markdown
     return (
       <div>
+      <div className="title-container">
+        <h2>Welcome to the Markdow Previewer</h2>
+        <p>Input your HTML in the Editor and see what happened in the Previewer</p>
+      </div>
+      
         <div className={classes[0]}>
           <ToolBar title="Editor" sizeControlIcon={classes[2]} onClick={this.handleEditorMaximized} />
           <Editor markdown={markdown} updateMarkdown={this.updateMarkdown} />
